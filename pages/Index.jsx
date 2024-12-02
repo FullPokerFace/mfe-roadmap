@@ -1,18 +1,23 @@
-// pages/index.js
-import Head from 'next/head';
-import { useEffect, useState } from 'react';
-import GradientText from '../components/GradientTesxt';
-import Accordion from '../components/Accordion';
-import ComprehensiveGuidelines from '../components/ComprehensiveGuidelines';
+// src/pages/Index.jsx
+import { useEffect, useState } from 'react'
+import GradientText from '../components/GradientText'
+import Accordion from '../components/Accordion'
+import ComprehensiveGuidelines from '../components/ComprehensiveGuidelines'
 
-export default function Home() {
-  const [mounted, setMounted] = useState(false);
+export default function Index() {
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
-  if (!mounted) return null;
+    // Update document title using useEffect instead of Next.js Head
+    useEffect(() => {
+      document.title = 'Migration guide'
+    }, [])
+  
+
+  if (!mounted) return null
 
   const data = [
     {
@@ -33,21 +38,15 @@ export default function Home() {
       title: "How are we migrating CSP to MFE?",
       description: "### Webpack Updates\nWe need to upgrade to Webpack 5 to support Module Federation. This includes updating web-react-build-config and adding MFE configuration.\n\n### Package Dependencies\nSeveral dependencies need specific versions to work with Webpack 5, including core packages and build tools.\n\n### Deployment Changes\nEach remote UI needs its own deployment pipeline to AWS, making resources available when needed.\n\n### Version Management\nWe're using Contentful for version control through a manifest file. The main UI reads this to load correct remote versions.\n\n### Fallback Strategy\nWe're keeping the existing build process as backup, allowing use of repositories from node_modules if needed.\n\n### Migration Plan\nAfter proof of concept, we'll migrate 2-3 repositories per sprint. Once complete, we'll clean up old configurations and possibly move away from Gulp."
     }
-  ];
-
-  // Then in your JSX
+  ]
 
 
   return (
-    <div className="flex flex-col ">
-      <Head>
-        <title>Migration guide</title>
-        <meta name="description" content="MFE Implementation Roadmap" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <div className="flex flex-col">
       <main className="flex-grow flex flex-col justify-end p-10">
-        <GradientText size="7xl" className={'mx-auto pb-3'}>CSP MFE Migration</GradientText>
+        <GradientText size="7xl" className={'mx-auto pb-3'}>
+          CSP MFE Migration
+        </GradientText>
         <p className="text-neutral-100 max-w-xl text-center mx-auto mt-6 mb-10">
           Some of the high level details for MFE project and Comprehensive guide.
         </p>
@@ -55,5 +54,5 @@ export default function Home() {
         <ComprehensiveGuidelines />
       </main>
     </div>
-  );
+  )
 }

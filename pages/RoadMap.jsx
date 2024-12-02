@@ -1,9 +1,8 @@
 // pages/index.js
-import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import RoadmapStep from '../components/RoadmapStep';
 import { steps } from '../utils/steps';
-import GradientText from '../components/GradientTesxt';
+import GradientText from '../components/GradientText';
 
 export default function Home() {
     const [mounted, setMounted] = useState(false);
@@ -16,12 +15,6 @@ export default function Home() {
 
     return (
         <div className="flex flex-col ">
-            <Head>
-                <title>MFE Roadmap</title>
-                <meta name="description" content="MFE Implementation Roadmap" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
             <main className="flex-grow flex flex-col justify-end py-10">
                 <GradientText size="7xl" className={'mx-auto'}>CSP MFE Roadmap</GradientText>
                 <p className="text-neutral-100 max-w-xl text-center mx-auto mt-10">

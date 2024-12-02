@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import RoadmapDialog from '../components/RoadmapDialog';
-import GradientText from '../components/GradientTesxt';
-import Head from 'next/head';
+import GradientText from '../components/GradientText';
 
 const issuesList = [
     {
@@ -38,11 +37,7 @@ const KnownIssues = () => {
     return (
         <>
 
-            <Head>
-                <title>Reported issues</title>
-                <meta name="description" content="List of reported issues with solutions" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+
             <div className="min-h-screen p-8">
                 <div className="text-center mb-12">
                     <GradientText size="7xl" className={'mx-auto'}>Known Issues</GradientText>
