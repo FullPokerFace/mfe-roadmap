@@ -24,5 +24,11 @@ export default defineConfig({
     assetsInclude: ['**/*.md'],
     resolve: {
         extensions: ['.js', '.jsx', '.json', '.md']
+    },
+    build: {
+        rollupOptions: {
+            external: ['#minpath', '#minproc', '#minurl']
+        }
     }
+
 })
