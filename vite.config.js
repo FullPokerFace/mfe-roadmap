@@ -1,34 +1,40 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import markdown from 'vite-plugin-markdown'
-
+import path from 'path'
 
 export default defineConfig({
     plugins: [
-        react({ include: '**/*.js', jsxRuntime: 'classic' }),
+        react(),
         markdown()
     ],
-    server: {
-        port: 3000
+    build: {
+        outDir: 'dist',
+        minify: 'terser',
+        sourcemap: false,
+        rollupOptions: {
+            external: ['#minpath', '#minproc', '#minurl'],
+            output: {
+                manualChunks: {
+                    vendor: ['react', 'react-dom', 'react-router-dom'],
+                },
+                chunkFileNames: 'assets/js/[name]-[hash].js',
+                entryFileNames: 'assets/js/[name]-[hash].js',
+                assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+            },
+        },
     },
-    esbuild: {
-        loader: 'jsx',
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, './src'),
+        },
+        preserveSymlinks: true
     },
     optimizeDeps: {
-        esbuild: {
-            loader: {
-                '.js': 'jsx',
-            },
-        }
+        exclude: ['vfile']
     },
-    assetsInclude: ['**/*.md'],
-    resolve: {
-        extensions: ['.js', '.jsx', '.json', '.md']
+    server: {
+        port: 3000,
+        open: true,
     },
-    build: {
-        rollupOptions: {
-            external: ['#minpath', '#minproc', '#minurl']
-        }
-    }
-
 })
