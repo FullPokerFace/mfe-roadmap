@@ -1,12 +1,12 @@
-import step1Content from '../content/roadmap-content/prototype.md/?raw';
-import step2Content from '../content/roadmap-content/webpackConfig.md/?raw';
-import step3Content from '../content/roadmap-content/versioning.md/?raw';
-import step4Content from '../content/roadmap-content/cicd.md/?raw';
-import step5Content from '../content/roadmap-content/poc.md/?raw';
-import step6Content from '../content/roadmap-content/poc.md/?raw';
-import step7Content from '../content/roadmap-content/poc.md/?raw';
-import step8Content from '../content/roadmap-content/poc.md/?raw';
-import step10Content from '../content/roadmap-content/poc.md/?raw';
+import step1Content from '../content/roadmap-content/prototype.md';
+import step2Content from '../content/roadmap-content/webpackConfig.md';
+import step3Content from '../content/roadmap-content/versioning.md';
+import step4Content from '../content/roadmap-content/cicd.md';
+import step5Content from '../content/roadmap-content/poc.md';
+import step6Content from '../content/roadmap-content/poc.md';
+import step7Content from '../content/roadmap-content/poc.md';
+import step8Content from '../content/roadmap-content/poc.md';
+import step10Content from '../content/roadmap-content/poc.md';
 
 export const steps = [
     {

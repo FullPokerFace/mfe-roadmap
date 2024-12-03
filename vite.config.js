@@ -1,19 +1,20 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import markdown from 'vite-plugin-markdown'
 import path from 'path'
+import markdown, { Mode } from 'vite-plugin-markdown'
 
 export default defineConfig({
     plugins: [
         react(),
-        markdown()
+        markdown({
+            mode: Mode.REACT
+        })
     ],
     build: {
         outDir: 'dist',
         minify: 'terser',
         sourcemap: false,
         rollupOptions: {
-            external: ['#minpath', '#minproc', '#minurl'],
             output: {
                 manualChunks: {
                     vendor: ['react', 'react-dom', 'react-router-dom'],
@@ -31,7 +32,7 @@ export default defineConfig({
         preserveSymlinks: true
     },
     optimizeDeps: {
-        exclude: ['vfile']
+        include: ['vfile']
     },
     server: {
         port: 3000,
