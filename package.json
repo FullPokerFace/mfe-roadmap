@@ -9,6 +9,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+    "repository": {
+      "url": "git+https://github.com/fullpokerface.github.io/mfe-roadmap.git"
+    },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.15",
     "gh-pages": "^4.0.0",
