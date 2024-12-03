@@ -13,7 +13,6 @@ module.exports = {
         chunkFilename: 'assets/js/[name].[contenthash].js',
         assetModuleFilename: 'assets/[ext]/[name].[hash][ext]',
         clean: true,
-        publicPath: '/mfe-roadmap/' // Add this line
     },
     resolve: {
         extensions: ['.js', '.jsx'],
