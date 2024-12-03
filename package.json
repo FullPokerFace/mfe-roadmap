@@ -7,6 +7,7 @@
     "build": "webpack --mode production --config config/webpack.prod.js",
     "lint": "eslint src --ext js,jsx"
   },
+  "homepage": "https://github.com/FullPokerFace/mfe-roadmap",
   "dependencies": {
     "@tailwindcss/typography": "^0.5.15",
     "react": "^18.2.0",
