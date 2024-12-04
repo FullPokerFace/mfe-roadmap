@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom'
 import Index from '../pages/Index'
-import Layout from '../components/Layout'
+import Layout from '../src/components/Layout'
 import Roadmap from '../pages/Roadmap'
 import KnownIssues from '../pages/KnownIssues'
 

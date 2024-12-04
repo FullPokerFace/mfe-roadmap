@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import RoadmapDialog from '../components/RoadmapDialog';
-import GradientText from '../components/GradientText';
+import RoadmapDialog from '../src/components/RoadmapDialog';
+import GradientText from '../src/components/GradientText';
 
 const issuesList = [
     {
@@ -36,8 +36,6 @@ const KnownIssues = () => {
 
     return (
         <>
-
-
             <div className="min-h-screen p-8">
                 <div className="text-center mb-12">
                     <GradientText size="7xl" className={'mx-auto'}>Known Issues</GradientText>

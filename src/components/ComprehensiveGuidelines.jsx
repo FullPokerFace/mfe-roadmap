@@ -1,5 +1,5 @@
 import React from 'react'
-import MdContent from '../content/guide/comprehensive-guide.md'
+import MdContent from '../../content/guide/comprehensive-guide.md'
 import ReactMarkdown from 'react-markdown'
 import GradientText from './GradientText'
 

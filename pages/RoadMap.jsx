@@ -1,10 +1,10 @@
 // pages/index.js
 import { useEffect, useState } from 'react';
-import RoadmapStep from '../components/RoadmapStep';
+import RoadmapStep from '../src/components/RoadmapStep';
 import { steps } from '../utils/steps';
-import GradientText from '../components/GradientText';
+import GradientText from '../src/components/GradientText';
 
-export default function Home() {
+export default function Roadmap() {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -41,6 +41,7 @@ export default function Home() {
                                 left={step.left}
                                 bottom={step.bottom}
                                 mdContent={step.mdContent}
+                                when={step.when}
                             />
                         ))}
                     </div>

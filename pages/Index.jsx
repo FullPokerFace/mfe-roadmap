@@ -1,8 +1,8 @@
 // src/pages/Index.jsx
 import { useEffect, useState } from 'react'
-import GradientText from '../components/GradientText'
-import Accordion from '../components/Accordion'
-import ComprehensiveGuidelines from '../components/ComprehensiveGuidelines'
+import GradientText from '../src/components/GradientText'
+import Accordion from '../src/components/Accordion'
+import ComprehensiveGuidelines from '../src/components/ComprehensiveGuidelines'
 
 export default function Index() {
   const [mounted, setMounted] = useState(false)

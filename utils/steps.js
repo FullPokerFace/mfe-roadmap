@@ -11,6 +11,7 @@ import step10Content from '../content/roadmap-content/poc.md';
 export const steps = [
     {
         title: "MFE Prototype",
+        when: "PI4 2024",
         passed: true,
         bottom: 19,
         left: 3,
@@ -18,6 +19,7 @@ export const steps = [
     },
     {
         title: "CSP Webpack Configuration",
+        when: "PI5 2024",
         passed: true,
         bottom: 18,
         left: 11,
@@ -25,6 +27,7 @@ export const steps = [
     },
     {
         title: "Dynamic Version Management",
+        when: "PI5 2024",
         passed: true,
         current: false,
         bottom: 22,
@@ -33,6 +36,7 @@ export const steps = [
     },
     {
         title: "CI/CD & POC",
+        when: "PI5 2024",
         passed: false,
         current: true,
         bottom: 23,
@@ -41,6 +45,7 @@ export const steps = [
     },
     {
         title: "Migration Preparation",
+        when: "PI5 2024",
         passed: false,
         current: false,
         bottom: 32,

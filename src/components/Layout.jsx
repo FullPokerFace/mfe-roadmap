@@ -4,10 +4,6 @@ import NavSwitch from './NavSwitch';
 const Layout = ({ children, title = 'CSP MFE' }) => {
     return (
         <div className="min-h-screen bg-gray-100">
-            <head>
-                <title>{title}</title>
-            </head>
-
             <main className='min-h-screen'>
                 <NavSwitch />
                 {children}

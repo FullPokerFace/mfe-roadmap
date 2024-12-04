@@ -3,7 +3,7 @@ import { useState } from 'react';
 import RoadmapDialog from './RoadmapDialog';
 import Airship from './Airship';
 
-export default function RoadmapStep({ title, mdContent, index, left, bottom, current, passed }) {
+export default function RoadmapStep({ title, mdContent, index, left, bottom, current, passed, when }) {
     const [isDialogOpen, setIsDialogOpen] = useState(false);
 
     return (
@@ -20,9 +20,8 @@ export default function RoadmapStep({ title, mdContent, index, left, bottom, cur
             >
                 {current && <Airship />}
                 <div className="flex flex-col items-center gap-2">
-                    <h3 className="text-sm font-bold text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] max-w-[90px] text-center">
-                        {title}
-                    </h3>
+
+
                     <div className={`w-4 h-4 rounded-full border-2 relative
                                 ${passed
                             ? 'border-green-500 bg-green-500'
@@ -34,6 +33,12 @@ export default function RoadmapStep({ title, mdContent, index, left, bottom, cur
                             </span>
                         )}
                     </div>
+                    <h3 className="text-sm font-bold text-white bg-orange-600 rounded-md px-3 py-1 text-center">
+                        {when || 'TBD'}
+                    </h3>
+                    <h3 className="text-sm font-bold text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] max-w-[90px] text-center">
+                        {title}
+                    </h3>
                 </div>
             </div>
 
