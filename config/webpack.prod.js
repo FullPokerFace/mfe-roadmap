@@ -10,7 +10,7 @@ module.exports = {
     mode: 'production',
     entry: './src/index.jsx',
     output: {
-        path: path.resolve(__dirname, '../build'),  // Go up one level
+        path: path.resolve(__dirname, 'build'),  // Go up one level
         filename: 'assets/js/[name].[contenthash].js',
         chunkFilename: 'assets/js/[name].[contenthash].js',
         assetModuleFilename: 'assets/[ext]/[name].[hash][ext]',
