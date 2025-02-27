@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { webpack } = require('webpack');
 
 module.exports = {
     mode: 'production',
@@ -12,6 +14,7 @@ module.exports = {
         filename: 'assets/js/[name].[contenthash].js',
         chunkFilename: 'assets/js/[name].[contenthash].js',
         assetModuleFilename: 'assets/[ext]/[name].[hash][ext]',
+        publicPath: '/', // Add this line
         clean: true,
     },
     resolve: {
@@ -60,6 +63,11 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: 'assets/css/[name].[contenthash].css'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'public/404.html', to: '404.html' }
+            ]
         })
     ],
     optimization: {
