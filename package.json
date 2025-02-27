@@ -9,7 +9,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://fullpokerface.github.io/csp-mfe-roadmap/",
+  "homepage": "https://fullpokerface.github.io/mfe-roadmap/",
   "dependencies": {
     "@tailwindcss/typography": "^0.5.15",
     "copy-webpack-plugin": "^12.0.2",
